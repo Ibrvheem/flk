@@ -3,6 +3,7 @@ import './App.css';
 import Flickity from 'flickity';
 import flickitySync from 'flickity-sync';
 function App() {
+  const [details, set]
   const styles = {
     container:{
       padding: '0rem 10rem'
@@ -27,13 +28,21 @@ function App() {
       backgroundColor: 'orange'
     }
   }
-  const [details, setD]
+
+  fetch('https://02aa-197-211-52-66.eu.ngrok.io/addbook', {
+  method : 'POST',
+  headers: {'Content-Type': 'Application/json'},
+  body: {}
+}
+  )
   return (
     <div className="App">
       <div style= {styles.container}>
         <h2>BOOK STORE</h2>
         <form action=""style = {styles.form}>
-          <input style = {styles.input} placeholder = 'Name' type="text"/>
+          <input style = {styles.input} placeholder = 'Name' type="text" onChange={ (e) =>{
+            console.log(e.target.value)
+          }}/>
           <input style = {styles.input} placeholder = 'Author' type="text" />
           <input style = {styles.input} placeholder = 'Year Published' type="text" />
           <input style = {styles.input} placeholder = 'Publisher' type="text" />
