@@ -2,8 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Flickity from 'flickity';
 import flickitySync from 'flickity-sync';
+import { useState } from 'react';
 function App() {
-  const [details, set]
+  // const [details, setDetails] = useState({name: fullname})
   const styles = {
     container:{
       padding: '0rem 10rem'
